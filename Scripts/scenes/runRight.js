@@ -16,7 +16,7 @@ var scenes;
         // Start Method
         RunRight.prototype.start = function () {
             // add Intro Image
-            this._runLeftImage = new createjs.Bitmap("../../Assets/images/WestEnemyEscape.png");
+            this._runLeftImage = new createjs.Bitmap("../../Assets/images/EastEnemyEscape.png");
             this.addChild(this._runLeftImage);
             this._Fight = new objects.Button("Fight", config.Screen.CENTER_X - 170, config.Screen.CENTER_Y + 180);
             this.addChild(this._Fight);
@@ -32,11 +32,11 @@ var scenes;
         };
         //EVENT HANDLERS ++++++++++++++++++++
         RunRight.prototype._fightClick = function (event) {
-            scene = config.Scene.RUN_FIGHT_LEFT;
+            scene = config.Scene.RUN_FIGHT_RIGHT;
             changeScene();
         };
         RunRight.prototype._findWayClick = function (event) {
-            scene = config.Scene.RUN_FIND_WAY_LEFT;
+            scene = config.Scene.RUN_FIND_WAY_RIGHT;
             changeScene();
         };
         return RunRight;

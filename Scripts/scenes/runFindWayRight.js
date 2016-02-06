@@ -16,9 +16,9 @@ var scenes;
         // Start Method
         RunFindWayRight.prototype.start = function () {
             // add Intro Image
-            this._findWayImage = new createjs.Bitmap("../../Assets/images/FindYourWayOut.png");
+            this._findWayImage = new createjs.Bitmap("../../Assets/images/FindYourWayOutRight.png");
             this.addChild(this._findWayImage);
-            this._findWay = new objects.Button("restart", config.Screen.CENTER_X + -45, config.Screen.CENTER_Y + 170);
+            this._findWay = new objects.Button("bossButton", config.Screen.CENTER_X + -45, config.Screen.CENTER_Y + 170);
             this.addChild(this._findWay);
             this._findWay.on("click", this._FindWayClick, this);
             // add this scene to the global stage container
@@ -29,7 +29,7 @@ var scenes;
         };
         //EVENT HANDLERS ++++++++++++++++++++
         RunFindWayRight.prototype._FindWayClick = function (event) {
-            scene = config.Scene.INTRO;
+            scene = config.Scene.BOSS_FIGHT_RIGHT3;
             changeScene();
         };
         return RunFindWayRight;

@@ -16,9 +16,9 @@ var scenes;
         // Start Method
         RunFightRight.prototype.start = function () {
             // add Intro Image
-            this._runFightImage = new createjs.Bitmap("../../Assets/images/WestEnemyFightLost.png");
+            this._runFightImage = new createjs.Bitmap("../../Assets/images/FindYourWayOutRight.png");
             this.addChild(this._runFightImage);
-            this._runFight = new objects.Button("restart", config.Screen.CENTER_X + -45, config.Screen.CENTER_Y + 170);
+            this._runFight = new objects.Button("bossButton", config.Screen.CENTER_X + -45, config.Screen.CENTER_Y + 170);
             this.addChild(this._runFight);
             this._runFight.on("click", this._runFightClick, this);
             // add this scene to the global stage container
@@ -29,7 +29,7 @@ var scenes;
         };
         //EVENT HANDLERS ++++++++++++++++++++
         RunFightRight.prototype._runFightClick = function (event) {
-            scene = config.Scene.INTRO;
+            scene = config.Scene.BOSS_FIGHT_RIGHT2;
             changeScene();
         };
         return RunFightRight;

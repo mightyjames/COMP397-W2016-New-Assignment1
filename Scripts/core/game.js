@@ -238,6 +238,27 @@ function changeScene() {
             currentScene = bossFightRight3;
             console.log("Starting BOSS_FIGHT_RIGHT3 Scene");
             break;
+        case config.Scene.RUN_RIGHT:
+            // show the MENU scene
+            stage.removeAllChildren();
+            runRight = new scenes.RunRight();
+            currentScene = runRight;
+            console.log("Starting RUN_RIGHT Scene");
+            break;
+        case config.Scene.RUN_FIGHT_RIGHT:
+            // show the MENU scene
+            stage.removeAllChildren();
+            runFightRight = new scenes.RunFightRight();
+            currentScene = runFightRight;
+            console.log("Starting RUN_FIGHT_RIGHT Scene");
+            break;
+        case config.Scene.RUN_FIND_WAY_RIGHT:
+            // show the MENU scene
+            stage.removeAllChildren();
+            runFindWayRight = new scenes.RunFindWayRight();
+            currentScene = runFindWayRight;
+            console.log("Starting RUN_FIND_WAY_RIGHT Scene");
+            break;
     }
     console.log(currentScene.numChildren);
 }

@@ -16,7 +16,7 @@ module scenes {
         // Start Method
         public start(): void {
             // add Intro Image
-            this._runLeftImage = new createjs.Bitmap("../../Assets/images/WestEnemyEscape.png");
+            this._runLeftImage = new createjs.Bitmap("../../Assets/images/EastEnemyEscape.png");
             this.addChild(this._runLeftImage);
             
             this._Fight = new objects.Button("Fight", config.Screen.CENTER_X - 170,
@@ -42,11 +42,11 @@ module scenes {
         //EVENT HANDLERS ++++++++++++++++++++
       
       private _fightClick(event: createjs.MouseEvent){
-          scene = config.Scene.RUN_FIGHT_LEFT;
+          scene = config.Scene.RUN_FIGHT_RIGHT;
           changeScene();
         }
       private _findWayClick(event: createjs.MouseEvent){
-          scene = config.Scene.RUN_FIND_WAY_LEFT;
+          scene = config.Scene.RUN_FIND_WAY_RIGHT;
           changeScene();
         }
     }

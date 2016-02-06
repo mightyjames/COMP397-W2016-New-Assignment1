@@ -15,10 +15,10 @@ module scenes {
         // Start Method
         public start(): void {
             // add Intro Image
-            this._runFightImage = new createjs.Bitmap("../../Assets/images/WestEnemyFightLost.png");
+            this._runFightImage = new createjs.Bitmap("../../Assets/images/FindYourWayOutRight.png");
             this.addChild(this._runFightImage);
             
-            this._runFight = new objects.Button("restart", config.Screen.CENTER_X + -45,
+            this._runFight = new objects.Button("bossButton", config.Screen.CENTER_X + -45,
                 config.Screen.CENTER_Y + 170);
             this.addChild(this._runFight);
             this._runFight.on("click", this._runFightClick, this);
@@ -36,7 +36,7 @@ module scenes {
         //EVENT HANDLERS ++++++++++++++++++++
       
       private _runFightClick(event: createjs.MouseEvent){
-          scene = config.Scene.INTRO;
+          scene = config.Scene.BOSS_FIGHT_RIGHT2;
           changeScene();
         }
     }
